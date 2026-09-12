@@ -1,0 +1,193 @@
+[gd_scene format=3 uid="uid://cbyp1xwa5d3e1"]
+
+[ext_resource type="Script" uid="uid://dyys16d60e4g2" path="res://scenes/level.gd" id="1_mx8sn"]
+[ext_resource type="Texture2D" uid="uid://c86br30sr4en" path="res://graphics/background/blue.png" id="1_w8frs"]
+[ext_resource type="PackedScene" uid="uid://wps0hpecyxnr" path="res://scenes/player.tscn" id="2_mx8sn"]
+[ext_resource type="Texture2D" uid="uid://cea48gsopj4hg" path="res://graphics/stars/star9.png" id="3_arp2o"]
+[ext_resource type="Texture2D" uid="uid://be3x4n4dcdjys" path="res://graphics/stars/star7.png" id="4_ux5qa"]
+[ext_resource type="Texture2D" uid="uid://ochrf7y3cu2r" path="res://graphics/stars/star10.png" id="5_82cfe"]
+[ext_resource type="Texture2D" uid="uid://b4cy0e36dnbj6" path="res://graphics/stars/star1.png" id="6_gunhw"]
+[ext_resource type="Texture2D" uid="uid://bst3ops4msu4b" path="res://graphics/stars/star4.png" id="7_8gofh"]
+[ext_resource type="Texture2D" uid="uid://buubpk21hq3sf" path="res://graphics/stars/star5.png" id="8_h6wmr"]
+[ext_resource type="Texture2D" uid="uid://bwth5gvxbmmbe" path="res://graphics/stars/star2.png" id="9_pqd0y"]
+[ext_resource type="Texture2D" uid="uid://djadgha1s8elj" path="res://graphics/stars/star12.png" id="10_5k0ak"]
+[ext_resource type="Texture2D" uid="uid://bg8isq21w2eei" path="res://graphics/stars/star11.png" id="11_wu01b"]
+[ext_resource type="Texture2D" uid="uid://qk6qfa0cfjf4" path="res://graphics/stars/star13.png" id="12_3ies3"]
+[ext_resource type="Texture2D" uid="uid://n8vvj61rsj2x" path="res://graphics/stars/star6.png" id="13_xy2fk"]
+[ext_resource type="Texture2D" uid="uid://bkh40fmhm17bi" path="res://graphics/stars/star14.png" id="14_cmcjb"]
+[ext_resource type="Texture2D" uid="uid://udwt3ihp1eix" path="res://graphics/stars/star3.png" id="15_556r4"]
+[ext_resource type="PackedScene" uid="uid://dn1vdyt00eyk8" path="res://scenes/ui.tscn" id="17_ux5qa"]
+[ext_resource type="AudioStream" uid="uid://metyini103uq" path="res://sounds/title-music.mp3" id="18_82cfe"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1iaoq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_arp2o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ux5qa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_82cfe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_gunhw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_8gofh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_h6wmr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_pqd0y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_5k0ak")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_wu01b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_3ies3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_xy2fk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_cmcjb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_556r4")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 7.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1iaoq"]
+size = Vector2(45, 720)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w8frs"]
+size = Vector2(1372, 39)
+
+[node name="Level" type="Node2D" unique_id=1720895961]
+script = ExtResource("1_mx8sn")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1837487453]
+position = Vector2(635.99994, 360)
+scale = Vector2(5.1874995, 2.9765623)
+texture = ExtResource("1_w8frs")
+metadata/_edit_lock_ = true
+
+[node name="Stars" type="Node2D" parent="." unique_id=1015511226]
+metadata/_edit_lock_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Stars" unique_id=801151171]
+sprite_frames = SubResource("SpriteFrames_1iaoq")
+autoplay = "default"
+frame = 12
+frame_progress = 0.7007214
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Stars" unique_id=36034838]
+sprite_frames = SubResource("SpriteFrames_1iaoq")
+autoplay = "default"
+frame = 12
+frame_progress = 0.7007214
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="Stars" unique_id=1056622285]
+sprite_frames = SubResource("SpriteFrames_1iaoq")
+autoplay = "default"
+frame = 12
+frame_progress = 0.7007214
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="Stars" unique_id=1686161670]
+sprite_frames = SubResource("SpriteFrames_1iaoq")
+autoplay = "default"
+frame = 12
+frame_progress = 0.7007214
+
+[node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="Stars" unique_id=709503350]
+sprite_frames = SubResource("SpriteFrames_1iaoq")
+autoplay = "default"
+frame = 12
+frame_progress = 0.7007214
+
+[node name="AnimatedSprite2D6" type="AnimatedSprite2D" parent="Stars" unique_id=1099568083]
+sprite_frames = SubResource("SpriteFrames_1iaoq")
+autoplay = "default"
+frame = 12
+frame_progress = 0.7007214
+
+[node name="AnimatedSprite2D7" type="AnimatedSprite2D" parent="Stars" unique_id=489115513]
+sprite_frames = SubResource("SpriteFrames_1iaoq")
+autoplay = "default"
+frame = 12
+frame_progress = 0.7007214
+
+[node name="AnimatedSprite2D8" type="AnimatedSprite2D" parent="Stars" unique_id=1940732853]
+sprite_frames = SubResource("SpriteFrames_1iaoq")
+autoplay = "default"
+frame = 12
+frame_progress = 0.7007214
+
+[node name="AnimatedSprite2D9" type="AnimatedSprite2D" parent="Stars" unique_id=293642891]
+sprite_frames = SubResource("SpriteFrames_1iaoq")
+autoplay = "default"
+frame = 12
+frame_progress = 0.7007214
+
+[node name="Player" parent="." unique_id=1616183038 instance=ExtResource("2_mx8sn")]
+position = Vector2(306, 449)
+
+[node name="Borders" type="Node2D" parent="." unique_id=1101872226]
+metadata/_edit_lock_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Borders" unique_id=887522577]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D" unique_id=1800335090]
+position = Vector2(1303, 360)
+shape = SubResource("RectangleShape2D_1iaoq")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Borders" unique_id=1558409410]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D2" unique_id=1142204589]
+position = Vector2(-23, 360)
+shape = SubResource("RectangleShape2D_1iaoq")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Borders" unique_id=2096327782]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D3" unique_id=1432981244]
+position = Vector2(641, -20)
+shape = SubResource("RectangleShape2D_w8frs")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Borders" unique_id=1217227545]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D4" unique_id=1352863557]
+position = Vector2(641, 740)
+shape = SubResource("RectangleShape2D_w8frs")
+
+[node name="MeteorTimer" type="Timer" parent="." unique_id=347938473]
+wait_time = 0.2
+autostart = true
+
+[node name="Meteors" type="Node2D" parent="." unique_id=432122087]
+metadata/_edit_lock_ = true
+
+[node name="Lasers" type="Node2D" parent="." unique_id=1211624931]
+metadata/_edit_lock_ = true
+
+[node name="UI" parent="." unique_id=743794760 instance=ExtResource("17_ux5qa")]
+
+[node name="Music" type="AudioStreamPlayer2D" parent="." unique_id=2116480909]
+stream = ExtResource("18_82cfe")
+volume_db = -4.031
+autoplay = true
+
+[connection signal="laser" from="Player" to="." method="_on_player_laser"]
+[connection signal="timeout" from="MeteorTimer" to="." method="_on_meteor_timer_timeout"]

@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://wps0hpecyxnr"]
+
+[ext_resource type="Texture2D" uid="uid://cw6hl5fximisr" path="res://graphics/ship/playerShip1_blue.png" id="1_3vyb7"]
+[ext_resource type="Script" uid="uid://okioub41sr24" path="res://scenes/player.gd" id="1_g2els"]
+[ext_resource type="AudioStream" uid="uid://bdbbwlxmvfmt5" path="res://sounds/sfx_laser2.ogg" id="3_qhqgy"]
+[ext_resource type="AudioStream" uid="uid://bisf8buewwl81" path="res://sounds/sfx_zap.ogg" id="4_dqkch"]
+
+[node name="Player" type="CharacterBody2D" unique_id=1582876903]
+collision_mask = 6
+script = ExtResource("1_g2els")
+
+[node name="PlayerImage" type="Sprite2D" parent="." unique_id=380328593]
+texture = ExtResource("1_3vyb7")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1478842674]
+polygon = PackedVector2Array(-9, -37, 9, -37, 12, -11, 36, 2, 48, -6, 46, 23, 13, 28, 6, 39, -8, 39, -14, 27, -46, 24, -49, -6, -35, 1, -13, -12)
+
+[node name="LaserStartPos" type="Marker2D" parent="." unique_id=657274642]
+position = Vector2(0, -53)
+gizmo_extents = 116.0
+
+[node name="LaserTimer" type="Timer" parent="." unique_id=549614265]
+wait_time = 0.5
+one_shot = true
+
+[node name="LaserSound" type="AudioStreamPlayer2D" parent="." unique_id=329747798]
+stream = ExtResource("3_qhqgy")
+
+[node name="DamageSound" type="AudioStreamPlayer2D" parent="." unique_id=98307394]
+stream = ExtResource("4_dqkch")
+
+[connection signal="timeout" from="LaserTimer" to="." method="_on_laser_timer_timeout"]

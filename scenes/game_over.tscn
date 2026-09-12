@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://bx13i38eaf4bv"]
+
+[ext_resource type="Script" uid="uid://u404xavtoiqi" path="res://scenes/game_over.gd" id="1_tbwuq"]
+[ext_resource type="FontFile" uid="uid://bugxp6rydf5gw" path="res://graphics/fonts/kenvector_future.ttf" id="1_wqhvx"]
+[ext_resource type="PackedScene" uid="uid://cbyp1xwa5d3e1" path="res://scenes/level.tscn" id="2_racf3"]
+[ext_resource type="FontFile" uid="uid://dx0jmh1gn4lct" path="res://graphics/fonts/kenvector_future_thin.ttf" id="2_tbwuq"]
+[ext_resource type="AudioStream" uid="uid://c2ig0eqqsugbf" path="res://sounds/bg-music.mp3" id="5_7m3ot"]
+
+[node name="GameOver" type="Control" unique_id=925399098]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tbwuq")
+level_scene = ExtResource("2_racf3")
+
+[node name="BG" type="ColorRect" parent="." unique_id=807609037]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.17777637, 0.1252541, 0.1821656, 1)
+metadata/_edit_lock_ = true
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=83246132]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=964182917]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer" unique_id=16561341]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_wqhvx")
+theme_override_font_sizes/font_size = 60
+text = "Game Over"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1817927525]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_tbwuq")
+theme_override_font_sizes/font_size = 40
+text = "Score: "
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=601930408]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -99.5
+offset_top = -40.0
+offset_right = 99.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_bottom = 15
+
+[node name="Label" type="Label" parent="MarginContainer" unique_id=1145352816]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_wqhvx")
+theme_override_font_sizes/font_size = 25
+text = "Press Space to start again"
+
+[node name="Music" type="AudioStreamPlayer2D" parent="." unique_id=1752669880]
+stream = ExtResource("5_7m3ot")
+volume_db = -8.466
+autoplay = true
